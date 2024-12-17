@@ -5,6 +5,7 @@ import * as express from 'express'
 import transaction from './transaction'
 import accoutns from './accounts'
 
+// So here we have created both router for transaction module and account module.. Then we are assigning it to the server App along with the module
 let app:any = express();
 
 app.use('/module1',transaction);

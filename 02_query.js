@@ -1,4 +1,5 @@
 
+// Imported http and url module
 let http = require('http')
 
 let url = require('url')
@@ -6,6 +7,7 @@ let url = require('url')
 let server = http.createServer((req,res)=>{
     res.writeHead(200,{'Content-Type':'text/html'}) // Mime
     
+    // Here we are parsing the url of the response and saving the url in the object
     let obj = url.parse(req.url, true).query
 
     // (obj.uname === 'Tony' && obj.upws === 'Chopper') ? res.write("<h1>Login Success</h1>") : res.write("<h2>Login fail</h2>")

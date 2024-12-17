@@ -1,7 +1,8 @@
-// creating the sub madule
+// creating the sub module
 
 import * as express from 'express'
 
+// created a router as sub module for the express..
 let transaction:any = express.Router();
 
 
