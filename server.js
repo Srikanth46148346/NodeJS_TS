@@ -4,6 +4,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
 var transaction_1 = require("./transaction");
 var accounts_1 = require("./accounts");
+// So here we have created both router for transaction module and account module.. Then we are assigning it to the server App along with the module
 var app = express();
 app.use('/module1', transaction_1.default);
 //http://localhost:8080/module1  [default request]

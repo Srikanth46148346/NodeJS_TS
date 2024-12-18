@@ -1,7 +1,8 @@
 "use strict";
-// creating the sub madule
+// creating the sub module
 Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
+// created a router as sub module for the express..
 var transaction = express.Router();
 transaction.get('/', function (req, res) {
     res.status(200).json({ "message": "Default Data from Transaction file" });
