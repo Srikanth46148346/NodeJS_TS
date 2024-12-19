@@ -11,7 +11,6 @@ let auth = (req:any, res:any, next:any)=>{
     }else{
         res.status(500).json({auth:"authorization failed"})
     }
-
 }
 
 //get request
