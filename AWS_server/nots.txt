@@ -1,0 +1,19 @@
+Deploying Node Project to AWS Server
+
+====================================
+
+Step 1: 
+    Create git Ignore file
+
+step 2: 
+    download the express module
+
+step 3:
+    develop rest services
+
+step 4: 
+    move server to GitHub
+
+step 5: 
+    Link GitHub to AWS
+    
