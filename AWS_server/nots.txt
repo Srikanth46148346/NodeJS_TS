@@ -16,4 +16,8 @@ step 4:
 
 step 5: 
     Link GitHub to AWS
-    
+
+    Here we go for the aws services (Elastic beanstalk) and create an environment by giving the required details
+    It will take some time to create the application
+
+    codePipeline: Used to create pipeline 
