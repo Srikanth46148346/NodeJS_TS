@@ -20,7 +20,7 @@ let fetch = express.Router().get('/', async (req, res) => {
         // Fetch products collection and return the results
         const products = await db.collection("products").find().toArray();
         
-        console.log("Products fetched:", products);  // Log the fetched products
+        console.log("Products fetched:");  // Log the fetched products
 
         // Send the results to the client as JSON
         res.status(200).json(products);

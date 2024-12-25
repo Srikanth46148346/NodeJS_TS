@@ -51,18 +51,18 @@ app.use(express.json());
 var update = express.Router();
 // The PUT route handler for updating a product
 update.put('/:productId', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var productId, _a, name, price, description, image, db, updateFields, result, err_1;
+    var productId, _a, name, price, description, image, uniqueId, db, updateFields, result, err_1;
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
                 productId = req.params.productId;
-                _a = req.body, name = _a.name, price = _a.price, description = _a.description, image = _a.image;
+                _a = req.body, name = _a.name, price = _a.price, description = _a.description, image = _a.image, uniqueId = _a.uniqueId;
                 // Check if productId is valid
                 if (!mongodb_1.ObjectId.isValid(productId)) {
                     return [2 /*return*/, res.status(400).json({ message: 'Invalid Product ID' })];
                 }
                 // Check if at least one field to update is provided
-                if (!name && !price && !description && !image) {
+                if (!name && !price && !description && !image && !uniqueId) {
                     return [2 /*return*/, res.status(400).json({ message: 'At least one field (name, price, description, image) must be provided' })];
                 }
                 _b.label = 1;
@@ -83,6 +83,8 @@ update.put('/:productId', function (req, res) { return __awaiter(void 0, void 0,
                     updateFields.description = description;
                 if (image)
                     updateFields.image = image;
+                if (uniqueId)
+                    updateFields.uniqueId = uniqueId;
                 return [4 /*yield*/, db.collection('products').updateOne({ _id: new mongodb_1.ObjectId(productId) }, // Find the product by ID
                     { $set: updateFields } // Update the fields provided in the request body
                     )];

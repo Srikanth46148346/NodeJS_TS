@@ -59,7 +59,7 @@ var fetch = express.Router().get('/', function (req, res) { return __awaiter(voi
                 return [4 /*yield*/, db.collection("products").find().toArray()];
             case 2:
                 products = _a.sent();
-                console.log("Products fetched:", products); // Log the fetched products
+                console.log("Products fetched:"); // Log the fetched products
                 // Send the results to the client as JSON
                 res.status(200).json(products);
                 return [3 /*break*/, 6];
